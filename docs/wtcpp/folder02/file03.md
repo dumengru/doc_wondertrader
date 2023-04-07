@@ -56,6 +56,7 @@ rates["time"] = rates["time"].map(lambda x: x + timedelta(minutes=delta_min))
 ![](../../assets/images/wt/wt020.png)
 (**所有重要的项目属性一定要设置好, 不然无法运行程序, 其他属性可参考同目录下TestDtPorter项目属性设置**)
 ![](../../assets/images/wt/wt021.png)
+   需要在项目属性值添加boostlib库的路径，不然编译会报错 找不到boost的lib
 
 在`TestDtHelper.cpp`添加测试代码确保项目环境配置无误(**如果编译不通过建议检查环境, 不要再往下了**)
 
@@ -64,9 +65,9 @@ rates["time"] = rates["time"].map(lambda x: x + timedelta(minutes=delta_min))
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
-#include "../../WtDtHelper/WtDtHelper.cpp"
-#include "../../WTSTools/CsvHelper.h"
-#include "../../Includes/WTSStruct.h"
+#include "../WtDtHelper/WtDtHelper.cpp"
+#include "../WTSTools/CsvHelper.h"
+#include "../Includes/WTSStruct.h"
 
 int main()
 {
